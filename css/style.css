@@ -212,6 +212,7 @@ h2 {
     text-transform: uppercase;
     margin: 20px 0 0 0;
     padding: 0 0 0 0;
+    width: 100%;
 }
 p {
     font-family: 'Chivo', sans-serif;
@@ -219,11 +220,10 @@ p {
     color: white;
     margin: 0;
     width: 80%;
-    height: 40%;
+    height: auto;
     line-height: 1.4;
     padding: 0;
     overflow: auto;
-    height: auto;
 }
 .more-recipes {
     display: flex;
@@ -303,5 +303,5 @@ a {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5) inset; /* Inner shadow */
     border-radius: 10px;
     backdrop-filter: blur(3px);
-    background-color: rgba(255, 255, 255, 0.231);
+    padding: 0 20px;
 }
