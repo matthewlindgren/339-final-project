@@ -5,22 +5,6 @@ body {
     background-color: rgb(10, 10, 10);
 }
 
-h1 {
-    font-family: "gazzetta-variable", 'Chivo', sans-serif;
-    font-variation-settings: "wght" 600;
-    font-size: 2.5rem;
-    color: white;
-    text-transform: uppercase;
-    margin: 0 0 -8px;
-    line-height: 1;
-    display: none;
-    float: revert;
-    position: revert;
-}
-@media screen and (min-width: 400px) {
-    h1 {display: block;}
-}
-
 header {
     display: flex;
     align-items: center;
@@ -129,9 +113,9 @@ button img {width: 12px;}
     right: 15px;
     z-index: 0;
     width: 0;
+    height: 0;
     border-radius: 20px;
     border: none;
-    height: 32px;
     font-family: 'Chivo';
     padding: 0 10px;
 }
@@ -144,22 +128,31 @@ button img {width: 12px;}
 }
 @keyframes enlarge {
     0% {
+        
+        margin-top: 16px;
+        height: 0;
         width: 0%;
         right: 25px;
     }
     100% {
-        width: 60%;
+        width: calc(100vw - 120px);
+        margin-top: 0;
         right: 15px;
+        height: 32px;
     }
 }
 @keyframes shrink {
     0% {
-        width: 60%;
+        width: calc(100vw - 120px);
+        height: 32px;
         right: 15px;
+        margin-top: 0;
     }
     100% {
         width: 0;
+        height: 0;
         right: 21px;
+        margin-top: 16px;
     }
 }
 
@@ -204,7 +197,7 @@ main > :nth-child(5n) {
     grid-column: 1 / -1;
 }
 
-h2 {
+h1, h2 {
     font-family: 'gazzetta-variable', 'Chivo', sans-serif;
     font-size: 5rem;
     color: white;
@@ -300,8 +293,67 @@ a {
     right: 5%;
     position: absolute;
     border: 1px solid white;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5) inset; /* Inner shadow */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5) inset;
     border-radius: 10px;
     backdrop-filter: blur(3px);
     padding: 0 20px;
+}
+
+#new-recipe-form {
+    display:grid;
+    grid-template-columns: 1fr 2.8fr;
+    row-gap: 5px;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 600;
+    color: white;
+    overflow: auto;
+}
+#new-recipe-form input, #new-recipe-form textarea, #new-recipe-form select {
+    border: none;
+    background-color: rgba(0, 6, 63, 0.384);
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    color: white;
+    resize: none;
+    overflow: auto;
+}
+
+#new-recipe-form :nth-child(7) {
+    grid-column: 1 / -1;
+}
+#new-recipe-form :nth-child(9) {
+    grid-column: 1 / -1;
+}
+#new-recipe-form :nth-child(11) {
+    grid-column: 2 / -1;
+}
+#new-recipe-form textarea {
+    grid-column: 1 / -1;
+    height: 16px;
+    width: calc(96% - 100px);
+    transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+#new-recipe-form textarea:active, #new-recipe-form textarea:focus {
+    grid-column: 1 / -1;
+    height: 60px;
+    width: 96%;
+}
+#new-recipe-form .submit-button {
+    grid-column: 1 / -1;
+    width: 100px;
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    background-color: #285FF4;
+    padding: 5px;
+    border-radius: 5px;
+    border: #2151d7 solid 1px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(48, 48, 48, 0.5) inset;
+    transition: font-size 0.3s ease;
+}
+#new-recipe-form .submit-button:hover, #new-recipe-form .submit-button:focus {
+    font-size: 15px;
 }

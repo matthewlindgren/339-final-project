@@ -17,7 +17,6 @@
             </button> -->
             <img src="assets/Logo-lineweight-white.svg" class="logo" alt="">
             <div class="main-bar">
-                <h1>Family Recipes</h1>
                 <nav>
                     <a>Recipes</span>
                     <a>Family</a>
@@ -34,18 +33,18 @@
     </header>
     <main>
         <div> <!-- All Recipes Pane -->
-            <h2>All Recipes</h2>
+            <h1>Family Recipes</h1>
             <p style="height:140px;">
                 Every year, the Lindgren family meets at Priest Lake, Idaho. After several decades, various recipes have been shared. This serves as a collection for them.
             </p>
             <a aria-label="More Recipes" class="more-recipes">
-                More Recipes
+                All Recipes
                 <img src="assets/export-arrow.svg" alt="">
             </a>
         </div>
         <div class="baseline">
             <a class="external-link">
-                <img src="assets/export-arrow.svg" alt="">
+                <img src="assets/export-arrow.svg" alt="Export arrow">
             </a>
             <h3>[Favorite Recipe]</h3>
             <p class="dark">Quick access to [dish name] recipe.</p>
@@ -53,14 +52,46 @@
         <div class="baseline dark">
             <img src="assets/justin-memoji.jpeg" alt="" class="memoji">
             <a class="external-link">
-                <img src="assets/export-arrow.svg" alt="">
+                <img src="assets/export-arrow.svg" alt="Export arrow">
             </a>
             <h3 style="color: white;">Justin's Recipes</h3>
             <p class="light">Recipes from Justin!</p>
         </div>
         <div>
             <div class="blurred-pane">
-                <h2 class="">Submit A Recipe</h2>
+                <h2 class="">Add A Recipe</h2>
+                <form id="new-recipe-form">
+                        <label for="recipe-name">Name:</label>
+                        <input type="text" id="recipe-name" name="recipe-name" placeholder="Recipe Name" required>
+
+                        <label for="recipe-owner">Owner:</label>
+                        <select id="recipe-owner" required>
+                            <option value="" disabled selected>Pick a recipe owner...</option>
+                            <option value="justin">Justin</option>
+                            <option value="shaun">Shaun</option>
+                            <option value="jan">Jan</option>
+                            <option value="mark-and-julie">Mark/Julie</option>
+                            <option value="allen-and-vanessa">Allen/Vanessa</option>
+                        </select>
+
+                        <label for="recipe-type">Type:</label>
+                        <select id="recipe-type" required>
+                            <option value="" disabled selected>Pick a type...</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="dessert">Dessert</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <label for="recipe-ingredients">Ingredients:</label>
+                        <textarea id="recipe-ingredients" name="recipe-ingredients" required></textarea>
+
+                        <label for="recipe-instructions">Instructions:</label>
+                        <textarea id="recipe-instructions" name="recipe-instructions" required></textarea>
+
+                        <input type="submit" value="Submit" class="submit-button">
+                </form>
             </div>
         </div>
     </main>
