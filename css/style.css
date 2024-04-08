@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://use.typekit.net/vbi2pew.css");
+
+body {
+    background-color: rgb(10, 10, 10);
+}
+
+h1 {
+    font-family: "gazzetta-variable", 'Chivo', sans-serif;
+    font-variation-settings: "wght" 600;
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    margin: 0 0 -8px;
+    line-height: 1;
+    display: none;
+    float: revert;
+    position: revert;
+}
+@media screen and (min-width: 400px) {
+    h1 {display: block;}
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    justify-content: space-between;
+    height: 50px;
+}
+nav {display: flex; margin: 10px;}
+nav a {
+    font-family: 'Chivo';
+    color: white;
+    margin: 0 4px;
+    font-size: small;
+    display: inline-block; /* Display inline block */
+    position: relative; /* Set position relative */
+}
+nav a:after {
+    content: ''; /* Add content after the element */
+    position: absolute; /* Position absolute for pseudo-element */
+    width: 100%; /* Full width */
+    transform: scaleX(0); /* Initial scale of 0 for underline effect */
+    height: 2px; /* Height of the underline */
+    bottom: 0; /* Align to bottom */
+    left: 0; /* Align to left */
+    background-color: 
+  #0087ca; /* Background color of the underline */
+    transform-origin: bottom right; /* Set transform origin */
+    transition: transform 0.25s ease-out; /* Transition effect for the underline */
+}
+nav a:hover:after, nav a:focus:after {
+    transform: scaleX(1); /* Scale the underline on hover */
+    transform-origin: bottom left; /* Set transform origin */
+}
+.main-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {height: 2em; margin: auto 10px;}
+
+.circle-button {width: 1.5rem;height: 1.5rem;border-radius: 50%;}
+button {
+    border: none;
+    cursor: pointer;
+    background-color: #285FF4;
+}
+button img {width: 12px;}
+.sidebar-button {background-color: #285FF4; padding: 0.4rem;}
+
+.search {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.6rem;
+    z-index: 1;
+    animation: spin 0.5s linear forwards;
+}
+.spin-reverse {animation: spin-reverse 0.3s linear forwards;}
+.spin {animation: spin 0.3s linear forwards;}
+@keyframes spin-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.fade-in {
+    animation: fade-in 0.3s ease-in-out forwards;
+}
+.fade-out {
+    animation: fade-out 0.3s ease-in-out forwards;
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#search-field {
+    position: absolute;
+    right: 15px;
+    z-index: 0;
+    width: 0;
+    border-radius: 20px;
+    border: none;
+    height: 32px;
+    font-family: 'Chivo';
+    padding: 0 10px;
+}
+
+.enlarge-search {
+    animation: enlarge 0.3s ease-in-out forwards;
+}
+.shrink-search {
+    animation: shrink 0.3s ease-in-out forwards;
+}
+@keyframes enlarge {
+    0% {
+        width: 0%;
+        right: 25px;
+    }
+    100% {
+        width: 60%;
+        right: 15px;
+    }
+}
+@keyframes shrink {
+    0% {
+        width: 60%;
+        right: 15px;
+    }
+    100% {
+        width: 0;
+        right: 21px;
+    }
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+main > * {
+    padding: 6%;
+    position: relative;
+}
+main > :nth-child(1n) {
+    grid-column: 1 / -1;
+    background-image: url('../assets/blue-bg1.jpeg');
+    background-size: cover;
+    height: 350px;
+    margin: 0 10px 5px 10px;
+    border-radius: 10px;
+}
+main > :nth-child(2n) {
+    grid-column: 1 / 3;
+    height: 200px;
+    margin: 5px 5px 10px 10px;
+    background-image: url('../assets/wavy-background.jpg');
+}
+main > :nth-child(3n) {
+    height: 200px;
+    margin: 5px 10px 10px 5px;
+    grid-column: 3 / -1;
+    background-image: url('../assets/blue-bg2.jpg');
+}
+main > :nth-child(4n) {
+    grid-column: 1 / -1;
+    background-image: url('../assets/light-wave-bg2.jpeg');
+    background-size: cover;
+    height: 350px;
+    margin: 0 10px 5px 10px;
+    border-radius: 10px;
+}
+main > :nth-child(5n) {
+    grid-column: 1 / -1;
+}
+
+h2 {
+    font-family: 'gazzetta-variable', 'Chivo', sans-serif;
+    font-size: 5rem;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+    padding: 0 0 0 0;
+}
+p {
+    font-family: 'Chivo', sans-serif;
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+    width: 80%;
+    height: 40%;
+    line-height: 1.4;
+    padding: 0;
+    overflow: auto;
+    height: auto;
+}
+.more-recipes {
+    display: flex;
+    background-color: #285FF4;
+    margin: 60px 10px;
+    border-radius: 15px;
+    height: 30px;
+    width: 150px;
+    font-family: 'Chivo', sans-serif;
+    color: white;
+    padding: 0 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+.more-recipes img {height: 12px;}
+h3 {
+    font-family: 'gazzetta-variable', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #285FF4;
+}
+.dark {
+    color:black;
+}
+.baseline {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.external-link {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    background-color: black;
+    width: 60px;
+    height: 36px;
+    border-radius: 20px;
+}
+a {
+    cursor: pointer;
+    position: relative;
+}
+.external-link img {
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+}
+.external-link:hover img, .external-link:focus img {
+    transform: translate(0%, -60%);
+}
+.light {
+    color: white;
+}
+.memoji {
+    position: absolute;
+    left: 3%;
+    top: 3%;
+    width: 15%;
+    border-radius: 50%;
+    border: 4px solid white;
+    transform: rotate(360deg);
+    transition: transform 0.3s ease;
+}
+.memoji:hover, .memoji:focus {
+    transform: rotate(345deg);
+}
+.blurred-pane {
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    position: absolute;
+    border: 1px solid white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5) inset; /* Inner shadow */
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.231);
+}

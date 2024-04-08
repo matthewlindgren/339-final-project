@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Recipes</title>
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vbi2pew.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <!-- <button class="sidebar-button circle-button">
+                <img src="assets/arrow-left.svg" alt="Toggle Menu">
+            </button> -->
+            <img src="assets/Logo-lineweight-white.svg" class="logo" alt="">
+            <div class="main-bar">
+                <h1>Family Recipes</h1>
+                <nav>
+                    <a>Recipes</span>
+                    <a>Family</a>
+                    <a>Add</a>
+                </nav>
+            </div>
+        </div>
+        <div style="display: flex">
+            <input id="search-field" type="text" class="shrink-search" placeholder="Search a recipe" aria-label="Search field">
+            <button class="search spin-reverse circle-button" aria-label="Expand Search">
+                <img src="assets/magnifyingglass.svg" alt="">
+            </button>
+        </div>
+    </header>
+    <main>
+        <div> <!-- All Recipes Pane -->
+            <h2>All Recipes</h2>
+            <p>
+                Every year, the Lindgren family meets at Priest Lake, Idaho. After several decades, various recipes have been shared. This serves as a collection for them.
+            </p>
+            <a aria-label="More Recipes" class="more-recipes">
+                More Recipes
+                <img src="assets/export-arrow.svg" alt="">
+            </a>
+        </div>
+        <div class="baseline">
+            <a class="external-link">
+                <img src="assets/export-arrow.svg" alt="">
+            </a>
+            <h3>[Favorite Recipe]</h3>
+            <p class="dark">Quick access to [dish name] recipe.</p>
+        </div>
+        <div class="baseline dark">
+            <img src="assets/justin-memoji.jpeg" alt="" class="memoji">
+            <a class="external-link">
+                <img src="assets/export-arrow.svg" alt="">
+            </a>
+            <h3 style="color: white;">Justin's Recipes</h3>
+            <p class="light">Recipes from Justin!</p>
+        </div>
+        <div>
+            <div class="blurred-pane"></div>
+        </div>
+    </main>
+</body>
+</html>
