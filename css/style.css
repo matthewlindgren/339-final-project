@@ -169,9 +169,10 @@ main > :nth-child(1n) {
     grid-column: 1 / -1;
     background-image: url('../assets/blue-bg1.jpeg');
     background-size: cover;
-    height: 350px;
+    height: 400px;
     margin: 0 10px 5px 10px;
     border-radius: 10px;
+    position: relative;
 }
 main > :nth-child(2n) {
     grid-column: 1 / 3;
@@ -189,12 +190,15 @@ main > :nth-child(4n) {
     grid-column: 1 / -1;
     background-image: url('../assets/light-wave-bg2.jpeg');
     background-size: cover;
-    height: 350px;
+    height: 400px;
     margin: 0 10px 5px 10px;
     border-radius: 10px;
 }
 main > :nth-child(5n) {
     grid-column: 1 / -1;
+    background-image: url('../assets/smooth-bg-black.jpeg');
+    height: 200px;
+    margin: 5px 10px 10px 10px;
 }
 
 h1, h2 {
@@ -214,14 +218,15 @@ p {
     margin: 0;
     width: 80%;
     height: auto;
-    line-height: 1.4;
+    line-height: 1.3;
     padding: 0;
     overflow: auto;
 }
 .more-recipes {
+    position: absolute;
     display: flex;
     background-color: #285FF4;
-    margin: 60px 10px;
+    bottom: 11%;
     border-radius: 15px;
     height: 30px;
     width: 150px;
@@ -318,6 +323,7 @@ a {
     color: white;
     resize: none;
     overflow: auto;
+    max-width: calc(96% - 30px);
 }
 
 #new-recipe-form :nth-child(7) {
