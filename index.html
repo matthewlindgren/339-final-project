@@ -15,20 +15,22 @@
             <!-- <button class="sidebar-button circle-button">
                 <img src="assets/arrow-left.svg" alt="Toggle Menu">
             </button> -->
-            <img src="assets/Logo-lineweight-white.svg" class="logo" alt="">
+            <a href="/index.html" tabindex="0">
+                <img src="assets/Logo-lineweight-white.svg" class="logo" alt="logo">
+            </a>
             <div class="main-bar">
                 <nav>
-                    <a>Recipes</span>
-                    <a>Family</a>
-                    <a>Add</a>
+                    <a tabindex="0">Recipes</span>
+                    <a tabindex="0">Family</a>
+                    <a tabindex="0">Add</a>
                 </nav>
             </div>
         </div>
         <div style="display: flex">
-            <input id="search-field" type="text" class="shrink-search" placeholder="Search a recipe" aria-label="Search field">
             <button class="search spin-reverse circle-button" aria-label="Expand Search">
                 <img src="assets/magnifyingglass.svg" alt="">
             </button>
+            <input id="search-field" type="text" class="shrink-search" placeholder="Search a recipe" aria-label="Search field" tabindex="0">
         </div>
     </header>
     <main>
@@ -37,24 +39,24 @@
             <p style="height:140px;">
                 Every year, the Lindgren family meets at Priest Lake, Idaho. After several decades, various recipes have been shared. This serves as a collection for them.
             </p>
-            <a aria-label="More Recipes" class="more-recipes">
+            <a aria-label="More Recipes" class="more-recipes" tabindex="0">
                 All Recipes
                 <img src="assets/export-arrow.svg" alt="">
             </a>
         </div>
         <div class="baseline">
-            <a class="external-link">
+            <a class="external-link" tabindex="0">
                 <img src="assets/export-arrow.svg" alt="Export arrow">
             </a>
-            <h3>[Favorite Recipe]</h3>
-            <p class="dark">Quick access to [dish name] recipe.</p>
+            <h3>Garlic Dip</h3>
+            <p class="dark">Quick access to Mark C's garlic dip recipe.</p>
         </div>
         <div class="baseline dark">
             <img src="assets/justin-memoji.jpeg" alt="" class="memoji">
-            <a class="external-link">
+            <a class="external-link" tabindex="0">
                 <img src="assets/export-arrow.svg" alt="Export arrow">
             </a>
-            <h3 style="color: white;">Justin's Recipes</h3>
+            <h3 class="light">Justin's Recipes</h3>
             <p class="light">Recipes from Justin!</p>
         </div>
         <div>
@@ -95,10 +97,10 @@
             </div>
         </div>
         <div>
-            <a class="external-link">
+            <a class="external-link" tabindex="0">
                 <img src="assets/export-arrow.svg" alt="Export arrow">
             </a>
-            <h2 class="">Family</h2>
+            <h3 class="light">Family</h2>
             <p>See recipes based on the each family member.</p>
         </div>
     </main>
