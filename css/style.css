@@ -111,6 +111,25 @@ button img {width: 12px;}
     }
 }
 
+#skip-to-main {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    font-family: 'Chivo', sans-serif;
+    padding: 10px;
+    left: -9999px;
+    top: -50px;
+    width: 98%;
+    position: absolute;
+}
+#skip-to-main:focus {
+    position: relative;
+    left: 10px;
+    top: 10px;
+    z-index: 9999;
+    display: block;
+}
+
 #search-field {
     position: absolute;
     right: 15px;
