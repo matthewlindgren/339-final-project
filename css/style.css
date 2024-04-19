@@ -424,6 +424,29 @@ nav a img {
     column-gap: 10px;
     padding: 5px 10%;
 }
+.family-profiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.family-profiles img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    flex: 0 0 50px;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    font-family: 'Chivo', 'gazzetta-variable', sans-serif;
+}
 @media screen and (min-width: 56em) {
     .widgets {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -471,7 +494,7 @@ nav a img {
         width: 120px;
         background-color: rgb(30, 30, 30);
         position: fixed;
-        height: 100%;
+        height: 95%;
         overflow: auto;
         border-radius: 10px;
         display: flex;
@@ -532,6 +555,57 @@ nav a img {
     .search-area {
         display: none;
     }
+    .family-profiles {
+        position: relative;
+        display: flex;
+        transform: translate3d(-50px, 0, 0);
+        max-width: 500px;
+        margin: 0 auto;
+        justify-content: center;
+        padding-left: 50px;
+        margin-bottom: 50px;
+    }
+    .profile {
+        width: 50px;
+        transition: width .3s ease;
+        display: block;
+    }
+    .profile:hover {
+        width: 75px;
+        z-index: 1;
+    }
+    .profile:hover + .profile,
+    .profile:has(+ .profile:hover) {
+        width: 75px;
+    }
+    .profile:hover + .profile img,
+    .profile:has(+ .profile:hover) img {
+        transform: translate3d(-25%, 0, 0) scale(.75);
+    }
+    .profile:hover img {
+        transform: translate3d(-25%, 0, 0) scale(1)
+    }
+    .profile > span {
+        position: absolute;
+        font-size: 2rem;
+        transform: translate3d(calc(-50% + 50px), 0, 0);
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+    .profile:hover > span {
+        opacity: 1;
+        color: white;
+        font-family: 'Chivo', 'gazzetta-variable', sans-serif;
+    }
+    .family-profiles img {
+        display: block;
+        border-radius: 50%;
+        transform: translate3d(-25%, 0, 0) scale(.5);
+        transition: transform .3s ease;
+        border: 10px solid #fff;
+        width: 150px;
+        height: 150px;
+    }
 }
 @media screen and (min-width: 75em) {
     .sidebar-button {
@@ -583,7 +657,7 @@ nav a img {
         width: 120px;
         background-color: rgb(30, 30, 30);
         position: fixed;
-        height: 100%;
+        height: 95%;
         overflow: auto;
         border-radius: 10px;
         display: flex;

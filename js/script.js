@@ -27,3 +27,12 @@ document.querySelector('.sidebar-button').addEventListener('click', function() {
         collapsed = false;
     }
 });
+
+document.querySelector('.submit-button').addEventListener('click', notAvailableMessage);
+document.querySelectorAll('.external-link')[0].addEventListener('click', notAvailableMessage);
+document.querySelectorAll('.external-link')[1].addEventListener('click', notAvailableMessage);
+document.querySelectorAll('.external-link')[2].addEventListener('click', notAvailableMessage);
+
+function notAvailableMessage() {
+    alert('This feature is not available yet.');
+}
