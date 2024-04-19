@@ -10,23 +10,28 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
+    <button class="sidebar-button circle-button">
+        <img src="assets/arrow-left.svg" alt="Toggle Menu">
+    </button>
     <header>
-        <div style="display: flex; align-items: center;">
-            <!-- <button class="sidebar-button circle-button">
-                <img src="assets/arrow-left.svg" alt="Toggle Menu">
-            </button> -->
+        <div class="links">
             <a href="/index.html" tabindex="0">
                 <img src="assets/Logo-lineweight-white.svg" class="logo" alt="logo">
             </a>
             <div class="main-bar">
                 <nav>
-                    <a tabindex="0">Recipes</span>
-                    <a tabindex="0">Family</a>
-                    <a tabindex="0">Add</a>
+                    <a tabindex="0" href="#all-recipes"><img src="assets/book-svgrepo-com.svg" alt=""></a>
+                    <a tabindex="0" classList="" href="#all-recipes">Recipes</a>
+                    <hr>
+                    <a tabindex="0" href="#family"><img src="assets/family.svg" alt=""></a>
+                    <a tabindex="0" classList="" href="#family">Family</a>
+                    <hr>
+                    <a tabindex="0"><img src="assets/circle-add-svgrepo-com (1).svg" alt=""></a>
+                    <a tabindex="0" classList="">Add</a>
                 </nav>
             </div>
         </div>
-        <div style="display: flex">
+        <div class="search-area">
             <button class="search spin-reverse circle-button" aria-label="Expand Search">
                 <img src="assets/magnifyingglass.svg" alt="">
             </button>
@@ -34,75 +39,113 @@
         </div>
     </header>
     <main>
-        <div> <!-- All Recipes Pane -->
-            <h1>Family Recipes</h1>
-            <p style="height:140px;">
-                Every year, the Lindgren family meets at Priest Lake, Idaho. After several decades, various recipes have been shared. This serves as a collection for them.
-            </p>
-            <a aria-label="More Recipes" class="more-recipes" tabindex="0">
-                All Recipes
-                <img src="assets/export-arrow.svg" alt="">
-            </a>
-        </div>
-        <div class="baseline">
-            <a class="external-link" tabindex="0">
-                <img src="assets/export-arrow.svg" alt="Export arrow">
-            </a>
-            <h3>Garlic Dip</h3>
-            <p class="dark">Quick access to Mark C's garlic dip recipe.</p>
-        </div>
-        <div class="baseline dark">
-            <img src="assets/justin-memoji.jpeg" alt="" class="memoji">
-            <a class="external-link" tabindex="0">
-                <img src="assets/export-arrow.svg" alt="Export arrow">
-            </a>
-            <h3 class="light">Justin's Recipes</h3>
-            <p class="light">Recipes from Justin!</p>
-        </div>
-        <div>
-            <div class="blurred-pane">
-                <h2 class="">New Recipe</h2>
-                <form id="new-recipe-form">
-                        <label for="recipe-name">Name:</label>
-                        <input type="text" id="recipe-name" name="recipe-name" placeholder="Recipe Name" required>
-
-                        <label for="recipe-owner">Owner:</label>
-                        <select id="recipe-owner" required>
-                            <option value="" disabled selected>Pick a recipe owner...</option>
-                            <option value="justin">Justin</option>
-                            <option value="shaun">Shaun</option>
-                            <option value="jan">Jan</option>
-                            <option value="mark-and-julie">Mark/Julie</option>
-                            <option value="allen-and-vanessa">Allen/Vanessa</option>
-                        </select>
-
-                        <label for="recipe-type">Type:</label>
-                        <select id="recipe-type" required>
-                            <option value="" disabled selected>Pick a type...</option>
-                            <option value="breakfast">Breakfast</option>
-                            <option value="lunch">Lunch</option>
-                            <option value="dinner">Dinner</option>
-                            <option value="dessert">Dessert</option>
-                            <option value="other">Other</option>
-                        </select>
-
-                        <label for="recipe-ingredients">Ingredients:</label>
-                        <textarea id="recipe-ingredients" name="recipe-ingredients" required></textarea>
-
-                        <label for="recipe-instructions">Instructions:</label>
-                        <textarea id="recipe-instructions" name="recipe-instructions" required></textarea>
-
-                        <input type="submit" value="Submit" class="submit-button">
-                </form>
+        <div class="widgets">
+            <div> <!-- All Recipes Pane -->
+                <h1>Family Recipes</h1>
+                <p style="height:140px;">
+                    Every year, the Lindgren family meets at Priest Lake, Idaho. After several decades, various recipes have been shared. This serves as a collection for them.
+                </p>
+                <a aria-label="More Recipes" class="more-recipes" tabindex="0" href="#all-recipes">
+                    All Recipes
+                    <img src="assets/export-arrow.svg" alt="">
+                </a>
+            </div>
+            <div class="baseline">
+                <a class="external-link" tabindex="0">
+                    <img src="assets/export-arrow.svg" alt="Export arrow">
+                </a>
+                <h3>Garlic Dip</h3>
+                <p class="dark">Quick access to Mark C's garlic dip recipe.</p>
+            </div>
+            <div class="baseline dark">
+                <img src="assets/justin-memoji.jpeg" alt="" class="memoji">
+                <a class="external-link" tabindex="0">
+                    <img src="assets/export-arrow.svg" alt="Export arrow">
+                </a>
+                <h3 class="light">Justin's Recipes</h3>
+                <p class="light">Recipes from Justin!</p>
+            </div>
+            <div>
+                <div class="blurred-pane">
+                    <h2 class="">New Recipe</h2>
+                    <form id="new-recipe-form">
+                            <label for="recipe-name">Name:</label>
+                            <input type="text" id="recipe-name" name="recipe-name" placeholder="Recipe Name" required>
+    
+                            <label for="recipe-owner">Owner:</label>
+                            <select id="recipe-owner" required>
+                                <option value="" disabled selected>Pick a recipe owner...</option>
+                                <option value="justin">Justin</option>
+                                <option value="shaun">Shaun</option>
+                                <option value="jan">Jan</option>
+                                <option value="mark-and-julie">Mark/Julie</option>
+                                <option value="allen-and-vanessa">Allen/Vanessa</option>
+                            </select>
+    
+                            <label for="recipe-type">Type:</label>
+                            <select id="recipe-type" required>
+                                <option value="" disabled selected>Pick a type...</option>
+                                <option value="breakfast">Breakfast</option>
+                                <option value="lunch">Lunch</option>
+                                <option value="dinner">Dinner</option>
+                                <option value="dessert">Dessert</option>
+                                <option value="other">Other</option>
+                            </select>
+    
+                            <label for="recipe-ingredients">Ingredients:</label>
+                            <textarea id="recipe-ingredients" name="recipe-ingredients" required></textarea>
+    
+                            <label for="recipe-instructions">Instructions:</label>
+                            <textarea id="recipe-instructions" name="recipe-instructions" required></textarea>
+    
+                            <input type="submit" value="Submit" class="submit-button">
+                    </form>
+                </div>
+            </div>
+            <div>
+                <a class="external-link" tabindex="0" href="#family">
+                    <img src="assets/export-arrow.svg" alt="Export arrow">
+                </a>
+                <h3 class="light">Family</h2>
+                <p>See recipes based on the each family member.</p>
             </div>
         </div>
-        <div>
-            <a class="external-link" tabindex="0">
-                <img src="assets/export-arrow.svg" alt="Export arrow">
-            </a>
-            <h3 class="light">Family</h2>
-            <p>See recipes based on the each family member.</p>
+        <h2 style="text-align: center;" id="all-recipes">All Recipes</h2>
+        <div class="buttons-container">
+            <button type="button" class="mixbutton" data-filter="all">All</button>
+            <button type="button" class="mixbutton" data-filter=".breakfast">Breakfast</button>
+            <button type="button" class="mixbutton" data-filter=".lunch">Lunch</button>
+            <button type="button" class="mixbutton" data-filter=".dinner">Dinner</button>
+            <button type="button" class="mixbutton" data-filter=".dessert">Dessert</button>
+            <button type="button" class="mixbutton" data-filter=".snacks">Snacks</button>
         </div>
+        <div class="recipes">
+            <div class="mix breakfast">
+                <div class="recipe">
+                </div>
+            </div>
+            <div class="mix lunch">
+                <div class="recipe">
+                </div>
+            </div>
+            <div class="mix lunch">
+                <div class="recipe">
+                </div>
+            </div>
+            <div class="mix lunch">
+                <div class="recipe">
+                </div>
+            </div>
+            <div class="mix lunch">
+                <div class="recipe">
+                </div>
+            </div>
+        </div>
+        <h2 style="text-align:center;" id="family">Family</h2>
     </main>
 </body>
+<script src="js/mixitup.js"></script>
+<script>
+    var mixer = mixitup(document.querySelector('.recipes'));
+</script>
 </html>

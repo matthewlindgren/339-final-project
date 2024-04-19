@@ -23,6 +23,9 @@ nav a {
     display: inline-block; /* Display inline block */
     position: relative; /* Set position relative */
 }
+a {
+    text-decoration: none;
+}
 nav a:after {
     content: ''; /* Add content after the element */
     position: absolute; /* Position absolute for pseudo-element */
@@ -157,15 +160,15 @@ button img {width: 12px;}
 }
 
 
-main {
+.widgets {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-main > * {
+.widgets > * {
     padding: 6%;
     position: relative;
 }
-main > :nth-child(1n) {
+.widgets > :nth-child(1) {
     grid-column: 1 / -1;
     background-image: url('../assets/blue-bg1.jpeg');
     background-size: cover;
@@ -174,28 +177,35 @@ main > :nth-child(1n) {
     border-radius: 10px;
     position: relative;
 }
-main > :nth-child(2n) {
+.widgets > :nth-child(2) {
+    background-size: cover;
     grid-column: 1 / 3;
     height: 200px;
+    border-radius: 10px;
     margin: 5px 5px 10px 10px;
     background-image: url('../assets/wavy-background.jpg');
 }
-main > :nth-child(3n) {
+.widgets > :nth-child(3) {
     height: 200px;
+    border-radius: 10px;
     margin: 5px 10px 10px 5px;
     grid-column: 3 / -1;
+    background-size: cover;
     background-image: url('../assets/blue-bg2.jpg');
 }
-main > :nth-child(4n) {
+.widgets > :nth-child(4) {
     grid-column: 1 / -1;
+    border-radius: 10px;
     background-image: url('../assets/light-wave-bg2.jpeg');
     background-size: cover;
     height: 400px;
     margin: 0 10px 5px 10px;
     border-radius: 10px;
 }
-main > :nth-child(5n) {
+.widgets > :nth-child(5) {
     grid-column: 1 / -1;
+    border-radius: 10px;
+    background-size: cover;
     background-image: url('../assets/smooth-bg-black.jpeg');
     height: 200px;
     margin: 5px 10px 10px 10px;
@@ -363,40 +373,263 @@ a {
 #new-recipe-form .submit-button:hover, #new-recipe-form .submit-button:focus {
     font-size: 15px;
 }
-
+.links {
+    display: flex;
+    align-items: center;
+}
+nav hr {
+    display: none;
+}
+.sidebar-button {
+    display: none;
+    box-shadow: 0 0 20px rgba(48, 48, 48, 0.5) inset;
+}
+.hidden {
+    display: none;
+}
+nav a img {
+    display: none;
+}
+.search-area {
+    display: flex;
+}
+.buttons-container {
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    overflow: auto;
+    margin-bottom: 15px;
+    margin: 10px auto;
+}
+.buttons-container button {
+    border-radius: 17.5px;
+    height: 35px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
+    font-family: 'Chivo', sans-serif;
+    color: white;
+}
+.recipe {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: rgb(30, 30, 30);
+}
+.recipes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 10px;
+    padding: 5px 10%;
+}
 @media screen and (min-width: 56em) {
-    main {
+    .widgets {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    main > :nth-child(1n) {
+    .widgets > :nth-child(1) {
         grid-column: 1 / 3;
         margin: 0 5px 5px 10px;
+        box-sizing: border-box;
+        height: 450px;
     }
-    main > :nth-child(2n) {
+    .widgets > :nth-child(2) {
         grid-column: 1 / 2;
-        height: 200px;
+        box-sizing: border-box;
+        height: 225px;
         margin: 5px 5px 5px 10px;
         background-image: url('../assets/wavy-background.jpg');
     }
-    main > :nth-child(3n) {
-        height: 200px;
+    .widgets > :nth-child(3) {
+        height: 225px;
+        box-sizing: border-box;
         margin: 5px 5px 5px 5px;
         grid-column: 2 / 3;
         background-image: url('../assets/blue-bg2.jpg');
     }
-    main > :nth-child(4n) {
+    .widgets > :nth-child(4) {
+        box-sizing: border-box;
         grid-column: 3 / -1;
         grid-row: 1 / -1;
         background-image: url('../assets/light-wave-bg2.jpeg');
         background-size: cover;
-        height: 400px;
+        height: 450px;
         margin: 0 10px 5px 5px;
         border-radius: 10px;
     }
-    main > :nth-child(5n) {
+    .widgets > :nth-child(5) {
+        box-sizing: border-box;
         grid-column: 3 / -1;
         background-image: url('../assets/smooth-bg-black.jpeg');
-        height: 200px;
+        height: 225px;
         margin: 5px 10px 5px 5px;
+    }
+    header {
+        margin: 10px;
+        padding: 5px;
+        width: 120px;
+        background-color: rgb(30, 30, 30);
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
+        transition: width 0.3s ease-in-out;
+    }
+    main {
+        padding-top: 10px;
+        margin-left: 150px;
+        transition: padding-left 0.5s ease-in-out;
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-bar {
+        flex-direction: column;
+        justify-items: center;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        display: flex;
+        flex-direction: column;
+        font-size: large;
+        align-items: center;
+    }
+    nav a img {
+        display: block;
+        width: 45px;
+    }
+    nav hr {
+        display: block;
+        width: 120%;
+        margin: 10px 0;
+        border-color: dimgray;
+    }
+    .logo {
+        height: 50px;
+    }
+    .sidebar-button {
+        display: block;
+        width: 30px;
+        height: 30px;
+        padding: 9px;
+        position: fixed;
+        left: 128px;
+        top: 25px;
+        z-index: 999;
+        rotate: 180deg;
+        transition: rotate 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+    .search-area {
+        display: none;
+    }
+}
+@media screen and (min-width: 75em) {
+    .sidebar-button {
+        display: none;
+    }
+    .widgets {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .widgets > :nth-child(1) {
+        grid-column: 1 / 3;
+        margin: 0 5px 5px 10px;
+        box-sizing: border-box;
+        height: 450px;
+    }
+    .widgets > :nth-child(2) {
+        grid-column: 1 / 2;
+        box-sizing: border-box;
+        height: 225px;
+        margin: 5px 5px 5px 10px;
+        background-image: url('../assets/wavy-background.jpg');
+    }
+    .widgets > :nth-child(3) {
+        height: 225px;
+        box-sizing: border-box;
+        margin: 5px 5px 5px 5px;
+        grid-column: 2 / 3;
+        background-image: url('../assets/blue-bg2.jpg');
+    }
+    .widgets > :nth-child(4) {
+        box-sizing: border-box;
+        grid-column: 3 / -1;
+        grid-row: 1 / -1;
+        background-image: url('../assets/light-wave-bg2.jpeg');
+        background-size: cover;
+        height: 450px;
+        margin: 0 10px 5px 5px;
+        border-radius: 10px;
+    }
+    .widgets > :nth-child(5) {
+        box-sizing: border-box;
+        grid-column: 3 / -1;
+        background-image: url('../assets/smooth-bg-black.jpeg');
+        height: 225px;
+        margin: 5px 10px 5px 5px;
+    }
+    header {
+        margin: 10px;
+        padding: 5px;
+        width: 120px;
+        background-color: rgb(30, 30, 30);
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
+        transition: width 0.3s ease-in-out;
+    }
+    main {
+        padding-top: 10px;
+        margin-left: 150px;
+        transition: padding-left 0.5s ease-in-out;
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-bar {
+        flex-direction: column;
+        justify-items: center;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        display: flex;
+        flex-direction: column;
+        font-size: large;
+        align-items: center;
+    }
+    nav a img {
+        display: block;
+        width: 45px;
+    }
+    nav hr {
+        display: block;
+        width: 120%;
+        margin: 10px 0;
+        border-color: dimgray;
+    }
+    .logo {
+        height: 50px;
+    }
+    .search-area {
+        display: none;
     }
 }
