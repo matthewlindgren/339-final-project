@@ -20,28 +20,27 @@ nav a {
     color: white;
     margin: 0 4px;
     font-size: small;
-    display: inline-block; /* Display inline block */
-    position: relative; /* Set position relative */
+    display: inline-block;
+    position: relative;
 }
 a {
     text-decoration: none;
 }
 nav a:after {
-    content: ''; /* Add content after the element */
-    position: absolute; /* Position absolute for pseudo-element */
-    width: 100%; /* Full width */
-    transform: scaleX(0); /* Initial scale of 0 for underline effect */
-    height: 2px; /* Height of the underline */
-    bottom: 0; /* Align to bottom */
-    left: 0; /* Align to left */
-    background-color: 
-  #0087ca; /* Background color of the underline */
-    transform-origin: bottom right; /* Set transform origin */
-    transition: transform 0.25s ease-out; /* Transition effect for the underline */
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 nav a:hover:after, nav a:focus:after {
-    transform: scaleX(1); /* Scale the underline on hover */
-    transform-origin: bottom left; /* Set transform origin */
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 .main-bar {
     display: flex;
@@ -724,5 +723,14 @@ nav a img {
     }
     .search-area {
         display: none;
+    }
+}
+/* Remove all animations */
+@media (prefers-reduced-motion: reduce) {
+    .search, .spin-reverse, .spin, .fade-in, .fade-out, .enlarge-search, .shrink-search {
+        animation: none;
+    }
+    nav a:after, .external-link img, .memoji, #new-recipe-form textarea, #new-recipe-form .submit-button, header, main, .sidebar-button, .profile, .profile > span {
+        transition: none;
     }
 }
