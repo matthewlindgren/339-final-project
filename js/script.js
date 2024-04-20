@@ -16,13 +16,13 @@ document.querySelector('.sidebar-button').addEventListener('click', function() {
     if (!collapsed) {
         document.querySelector('header').style.width = "50px";
         this.style.left = "60px";
-        this.style.rotate = "0deg";
+        this.style.rotate = "180deg";
         document.querySelector('main').style.marginLeft = "80px";
         collapsed = true;
     } else {
         document.querySelector('header').style.width = "120px";
         this.style.left = "128px";
-        this.style.rotate = "180deg";
+        this.style.rotate = "360deg";
         document.querySelector('main').style.marginLeft = "150px";
         collapsed = false;
     }
