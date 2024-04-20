@@ -22,13 +22,13 @@
             <div class="main-bar">
                 <nav>
                     <a tabindex="0" href="#all-recipes" aria-label="Recipes"><img src="assets/book-svgrepo-com.svg" alt="Link to all recipes"></a>
-                    <a tabindex="0" classList="" href="#all-recipes">Recipes</a>
+                    <a tabindex="0" href="#all-recipes" classList="">Recipes</a>
                     <hr>
                     <a tabindex="0" href="#family" aria-label="Family"><img src="assets/family.svg" alt="Link to family"></a>
-                    <a tabindex="0" classList="" href="#family">Family</a>
+                    <a tabindex="0" href="#family" classList="">Family</a>
                     <hr>
-                    <a tabindex="0" href="#add-recipe" aria-label="Add"><img src="assets/circle-add-svgrepo-com (1).svg" alt="Link to add recipe"></a>
-                    <a tabindex="0" classList="" href="#add-recipe">Add</a>
+                    <a tabindex="0" href="#add-recipe" aria-label="Add"><img src="assets/circle-add-svgrepo-com.svg" alt="Link to add recipe"></a>
+                    <a tabindex="0" href="#add-recipe" classList="">Add</a>
                 </nav>
             </div>
         </div>
@@ -107,7 +107,7 @@
                 <a class="external-link" tabindex="0" href="#family">
                     <img src="assets/export-arrow.svg" alt="Export arrow">
                 </a>
-                <h3 class="light">Family</h2>
+                <h3 class="light">Family</h3>
                 <p>See recipes based on the each family member.</p>
             </div>
         </div>
@@ -163,9 +163,9 @@
         </div>
         <h2 style="text-align:center;" id="add-recipe">Add A Recipe</h2>    
     </main>
+    <script src="js/mixitup.js"></script>
+    <script>
+        var mixer = mixitup(document.querySelector('.recipes'));
+    </script>
 </body>
-<script src="js/mixitup.js"></script>
-<script>
-    var mixer = mixitup(document.querySelector('.recipes'));
-</script>
 </html>
